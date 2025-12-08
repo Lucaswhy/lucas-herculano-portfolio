@@ -1,0 +1,41 @@
+.switchTranslate {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 5rem;
+  padding: 1rem;
+  border: 1px solid var(--white);
+  position: relative;
+  .switchTranslate__arrow {
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .switchTranslate--arrow {
+    @extend .switchTranslate__arrow;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  .switchTranslate__dropdown {
+    position: absolute;
+    left: 1;
+    top: 100%;
+    width: inherit;
+    padding: inherit;
+    background-color: #0a3a40;
+    border: inherit;
+    border-top: none;
+    .dropdown__item {
+      margin: 0.5rem 0;
+      text-align: center;
+      cursor: pointer;
+    }
+    .dropdown--item {
+      @extend .dropdown__item;
+      color: var(--primary);
+    }
+  }
+}

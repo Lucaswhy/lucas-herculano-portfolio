@@ -1,0 +1,12 @@
+.works {
+  .works__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .works__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
