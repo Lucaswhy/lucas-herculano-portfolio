@@ -1,0 +1,58 @@
+<section class="works">
+  <h2 class="works__title">{{ language === 'en' ? 'My Portfolio' : 'Meu Portfolio' }}</h2>
+  <div class="works__projects">
+    <app-work-container
+      [title]="'checkout-uau.uaubox.com.br'"
+      [imgUrl]="'uaubox-checkout.png'"
+      [imgAlt]="'Checkout site'"
+      [description]="
+        language === 'en'
+          ? 'Built all the payment flow and creation of a subscription, using React and Next on Frontend and Java with Spring boot on Backend.'
+          : 'Feito todo o fluxo de pagamento e criação de assinatura utilizando React com Next no Frontend e Java com Spring boot no Backend.'
+      "
+      [redirectLink]="'https://checkout-uau.uaubox.com.br/'"
+    />
+    <app-work-container
+      [title]="'myportfolio-dev.vercel.app'"
+      [imgUrl]="'myportfolio.png'"
+      [imgAlt]="'Portfolio site'"
+      [description]="
+        language === 'en'
+          ? 'Created a multi-page portfolio project using Vue2 and implemented simple features, like a carousel. I deployed the project using Vercel. '
+          : 'Criei um projeto de portfólio com algumas páginas utilizando Vue2, contendo algumas features simples, como troca por idioma e Carrosel. Deploy do projeto online pelo Vercel.'
+      "
+      [redirectLink]="'https://myportfolio-dev.vercel.app/'"
+    />
+    <app-work-container
+      [title]="'app.uaubox.com.br'"
+      [imgUrl]="'uaubox-customer-area.png'"
+      [imgAlt]="'Customer area site'"
+      [description]="
+        language === 'en'
+          ? 'Implemented a full authenticatioon flow (2FA included), and some features on customer area. I was also responsible for its maintenance and bug fixes.'
+          : 'Implementei o fluxo de autenticação e login (incluindo 2FA), e algumas features da área logada, assim como correções e manutenção.'
+      "
+      [redirectLink]="'https://app.uaubox.com.br/login'"
+    />
+    <app-work-container
+      [title]="language === 'en' ? 'LP for a Product' : 'LP para um produto'"
+      [imgUrl]="'lp-scarlet.png'"
+      [imgAlt]="'Landing Page'"
+      [description]="
+        language === 'en'
+          ? 'Developed an entire LP, all the sections made by me, included a grid feature working on different ways for mobile/desktop. Made it with React and Next.'
+          : 'Desenvolvido uma LP inteira, todas sessões criadas por mim, incluindo uma feature de grid funcionando de maneira diferentes para mobile/desktop. Projeto de React com Next.'
+      "
+    />
+    <app-work-container
+      [title]="language === 'en' ? 'LP for a company' : 'LP para uma empresa'"
+      [imgUrl]="'x-lp.png'"
+      [imgAlt]="'Landing page'"
+      [description]="
+        language === 'en'
+          ? 'Freelance work requested by a company X with features of sending e-mail directly from the front-end which i created using React with next and using the server-side of Next. The LP The landing page and its data were later taken down after company X decided to not follow with the project.'
+          : 'Freelance solicitado para uma LP de uma empresa X, com feature de enviar e-mail diretamente pelo Front, criado utilizando React com Next e utilizando o server-side do Next. A LP foi deletada e ocultada as informações porque a empresa X decidiu não prosseguir com o projeto.'
+      "
+    />
+  </div>
+</section>

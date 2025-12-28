@@ -1,0 +1,16 @@
+.button {
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  height: 1rem;
+  min-width: 5rem;
+  cursor: pointer;
+  .button__title {
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .button__title:hover {
+    color: var(--white);
+  }
+}

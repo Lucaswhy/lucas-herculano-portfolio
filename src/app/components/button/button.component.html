@@ -1,0 +1,7 @@
+<div
+  class="button"
+  [style.background-color]="bgColor ? bgColor : 'var(--primary)'"
+  (click)="redirectToUrl()"
+>
+  <p class="button__title" [style.color]="color || 'var(--white)'">{{ title }}</p>
+</div>
