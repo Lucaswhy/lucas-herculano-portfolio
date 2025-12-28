@@ -15,8 +15,8 @@ interface WorkContainerProperties {
   templateUrl: './work-container.component.html',
   styleUrls: ['./work-container.component.scss'],
 })
-export class WorkContainer {
-  @Input() title!: string;
+export class WorkContainer implements WorkContainerProperties {
+  @Input({ required: true }) title!: string;
   @Input() imgUrl!: string;
   @Input() imgAlt!: string;
   @Input() description!: string;

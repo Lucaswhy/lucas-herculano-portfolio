@@ -6,13 +6,14 @@
     [content]="
       languageService.getCurrentLanguage() === 'en'
         ? 'Experienced Full Stack Developer with 5 years in the field. My tech stack includes leading front-end frameworks (React/Next, Vue, Angular) and robust back-end technologies (Java/Spring Boot, Node/Nest). I am also proficient in cloud platforms, having worked extensively with both GCP and AWS. For a comprehensive overview of my technical capabilities, please see my CV.'
-        : 'Desenvolvedor Full Stack à 5 anos, atuando com as tecnologias mais utilizadas do mercado, React/Next, Vue, Angular para o front-end e Java/Springboot ou Node/Nest para o back-end. Também trabalho tanto com GCP ou a AWS utilizando seus diversos serviços. Para mais informações sobre minha capacidade técnica, recomendo visualizar meu CV.'
+        : 'Desenvolvedor Full Stack à 5 anos, atuando com as tecnologias mais utilizadas do mercado, React/Next, Vue, Angular para o front-end e Java/Spring boot ou Node/Nest para o back-end. Também trabalho tanto com GCP ou a AWS utilizando seus diversos serviços. Para mais informações sobre minha capacidade técnica, recomendo visualizar meu CV.'
     "
     [buttonRedirectLink]="
       languageService.getCurrentLanguage() === 'en'
         ? 'https://docs.google.com/document/d/1j8KeZZO0Bo-2JPQwSbi0E5pa8y6Xo7fbI7VYon0jtM0/edit?usp=sharing'
         : 'https://docs.google.com/document/d/1zI99pDPv7KyL3-ygGi3ENoIiwybTgFoCLjQeUNYV79Y/edit?usp=sharing'
     "
+    [buttonLabel]="languageService.getCurrentLanguage() === 'en' ? 'My CV' : 'Meu CV'"
   />
   <app-my-work [language]="languageService.getCurrentLanguage()" />
   <app-contact

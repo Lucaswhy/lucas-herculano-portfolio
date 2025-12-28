@@ -20,10 +20,13 @@
   <div>
     <div [class]="isClicked ? 'switchTranslate__arrow' : 'switchTranslate--arrow'"></div>
   </div>
-  @if (isClicked) {
-  <div class="switchTranslate__dropdown">
+  <div class="switchTranslate__dropdown" [class.show]="isClicked">
     <div
-      [class]="language === 'en' ? 'dropdown--item' : 'dropdown__item'"
+      [class]="
+        language === 'en'
+          ? 'dropdown--item dropdown-item-animation'
+          : 'dropdown__item dropdown-item-animation'
+      "
       (click)="newLanguage('en')"
     >
       <span>English</span>
@@ -35,5 +38,4 @@
       <span>Português</span>
     </div>
   </div>
-  }
 </div>

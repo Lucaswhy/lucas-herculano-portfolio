@@ -11,6 +11,7 @@ import { Button } from '../../../../components/button/button.component';
 export class AboutMe {
   @Input() content!: string;
   @Input() buttonRedirectLink!: string;
+  @Input() buttonLabel!: string;
 
   protected readonly about = signal('');
 

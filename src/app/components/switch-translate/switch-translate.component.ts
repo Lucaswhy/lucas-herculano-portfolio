@@ -1,6 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { LanguageService } from '../../services/language/language.service';
 
+interface SwitchTranslateProperties {
+  language: string;
+}
+
 @Component({
   selector: 'app-switch-translate',
   standalone: true,
@@ -8,10 +12,10 @@ import { LanguageService } from '../../services/language/language.service';
   styleUrls: ['./switch-translate.component.scss'],
   imports: [],
 })
-export class SwitchTranslate {
+export class SwitchTranslate implements SwitchTranslateProperties {
   constructor(private languageService: LanguageService) {}
 
-  @Input() language!: string;
+  @Input({ required: true }) language!: string;
   protected isClicked: boolean = false;
 
   newLanguage(newLanguage: string): void {

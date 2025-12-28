@@ -6,6 +6,9 @@
   padding: 1rem;
   border: 1px solid var(--white);
   position: relative;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
   .switchTranslate__arrow {
     border: solid var(--white);
     border-width: 0 3px 3px 0;
@@ -13,6 +16,7 @@
     padding: 3px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transition: transform 0.3s ease;
   }
   .switchTranslate--arrow {
     @extend .switchTranslate__arrow;
@@ -28,6 +32,15 @@
     background-color: #0a3a40;
     border: inherit;
     border-top: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
     .dropdown__item {
       margin: 0.5rem 0;
       text-align: center;
